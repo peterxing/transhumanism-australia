@@ -44,7 +44,7 @@ jobs:
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
             git add data
             git commit -m "Refresh events and the Radar" -q
-            git push -q || echo "push failed (a newer commit landed); the next run will catch up"
+            git pull --rebase -q origin main && git push -q || echo "push failed; the next run will catch up"
           else
             echo "no data changes"
           fi

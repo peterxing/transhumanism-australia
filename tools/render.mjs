@@ -393,12 +393,13 @@ ${section('about', '', 'Decoding the mind', '', `<div class="prose"><p>Approxima
 ${finalCta()}` });
 
   // ================================================================== redirects, 404, next
-  const redirect = (to, title) => `<!doctype html><html lang="en-AU"><head><meta charset="utf-8"><title>${esc(title)}</title><meta name="robots" content="noindex"><link rel="canonical" href="${SITE}/${to.replace(/^\.\//, '')}"><meta http-equiv="refresh" content="0; url=${esc(to)}"><script>location.replace(${JSON.stringify(to)}+(location.hash&&!${JSON.stringify(to)}.includes('#')?location.hash:''))</script></head><body><p><a href="${esc(to)}">${esc(title)}</a></p></body></html>\n`;
+  const inlineJson = v => JSON.stringify(v).replace(/</g, '\\u003c');
+  const redirect = (to, title) => `<!doctype html><html lang="en-AU"><head><meta charset="utf-8"><title>${esc(title)}</title><meta name="robots" content="noindex"><link rel="canonical" href="${SITE}/${esc(to.replace(/^\.\//, ''))}"><meta http-equiv="refresh" content="0; url=${esc(to)}"><script>location.replace(${inlineJson(to)}+(location.hash&&!${inlineJson(to)}.includes('#')?location.hash:''))</script></head><body><p><a href="${esc(to)}">${esc(title)}</a></p></body></html>\n`;
   const legacy = { home: './', technologies: './#supers', 'quantum-computing': './#supers', robotics: './#supers', 'biotech-and-nanotech': './#super-longevity', 'vr-and-ar': './#supers', automation: './#supers', healthspan: './#super-longevity', 'internet-of-things': './#supers', 'all-speakers': 'speakers' };
   for (const [from, to] of Object.entries(legacy)) files[`${from}.html`] = redirect(to, site.name);
 
   const nextTarget = next ? rsvpUrl(next) : 'events';
-  files['next.html'] = `<!doctype html><html lang="en-AU"><head><meta charset="utf-8"><title>Next meetup · ${esc(site.name)}</title><meta name="robots" content="noindex"><meta http-equiv="refresh" content="0; url=${esc(nextTarget)}"><script>location.replace(${JSON.stringify(nextTarget)})</script></head><body><p><a href="${esc(nextTarget)}">${next ? `${esc(evTitle(next))}, ${esc(fmt(next.start, 'long'))}` : 'Events'}</a></p></body></html>\n`;
+  files['next.html'] = `<!doctype html><html lang="en-AU"><head><meta charset="utf-8"><title>Next meetup · ${esc(site.name)}</title><meta name="robots" content="noindex"><meta http-equiv="refresh" content="0; url=${esc(nextTarget)}"><script>location.replace(${inlineJson(nextTarget)})</script></head><body><p><a href="${esc(nextTarget)}">${next ? `${esc(evTitle(next))}, ${esc(fmt(next.start, 'long'))}` : 'Events'}</a></p></body></html>\n`;
 
   files['404.html'] = `<!doctype html><html lang="en-AU"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Page not found · ${esc(site.name)}</title><meta name="robots" content="noindex">
 <script>(function(){var p=location.pathname;var m=p.match(/^(.*\\/)([^/]+)\\/+$/);if(m){location.replace(m[1]+m[2]+location.search+location.hash);return}var low=p.toLowerCase();if(low!==p){location.replace(low+location.search+location.hash)}})()</script>
