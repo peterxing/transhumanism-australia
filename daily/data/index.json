@@ -1,0 +1,39 @@
+{
+ "show": "The Transhuman Daily",
+ "updated": "2026-11-02T05:09:41+00:00",
+ "latest": "2026-11-02",
+ "site": "https://transhuman.com.au/",
+ "section": "https://transhuman.com.au/daily",
+ "videosOnPages": 3,
+ "episodes": [
+  {
+   "date": "2026-11-02",
+   "ep": 1,
+   "hook": "NEVER TOO LATE.",
+   "day": "Monday 2 November 2026",
+   "tldr": "Never too late: two treatments helped old mice live longer, retiring didn't make older Australians lonelier, and a psychedelic spray eased tough depression in a mid-stage trial.",
+   "stories": 17,
+   "pillars": {
+    "longevity": 6,
+    "wellbeing": 3,
+    "intelligence": 5,
+    "frontier": 3
+   },
+   "titles": [
+    "Blocking one enzyme helped old mice live 17% longer",
+    "Retiring didn't make older Australians any lonelier",
+    "An AI agent reading abdominal ultrasounds got 99.6% of diagnoses right in 100 checked reports"
+   ],
+   "cover": "daily/media/2026-11-02/cover.webp",
+   "thumb": "daily/media/2026-11-02/thumb.webp",
+   "video": {
+    "pages": true,
+    "file": "daily/media/2026-11-02/video.mp4",
+    "release": "https://github.com/peterxing/transhumanism-australia/releases/download/td-ep-2026-11-02/The-Transhuman-Daily_2026-11-02.mp4",
+    "mb": 56.3,
+    "bytes": 56278568,
+    "seconds": 180.01
+   }
+  }
+ ]
+}
