@@ -1,0 +1,78 @@
+{
+ "_about": "Profile pages for the co-founders (/peterxing and /alysesue). Peter's recent talks are refreshed from peterxing.com/author.json each morning (data/peter-talks.json); everything else here is edited by hand.",
+ "peterxing": {
+  "name": "Peter Xing",
+  "role": "Co-founder, Transhumanism Australia",
+  "headline": "Futurist, keynote speaker and technologist working at the intersection of AI, longevity science and human augmentation.",
+  "photo": "assets/img/people/peter-xing.webp",
+  "photo2": "assets/img/people/peter-xing-tedx.webp",
+  "photo2_alt": "Peter Xing speaking at TEDxMelbourne",
+  "bio": [
+   "Peter Xing helps organisations and individuals navigate, and flourish in, a time of accelerating change. He co-founded Transhumanism Australia, a venture studio and community that works with academic research institutions to accelerate projects for the global transhumanism movement, from Transhuman Coin to investing in founders with WAVIA (formerly SingularityU Australia).",
+   "Peter is Singularity Group expert faculty and a TEDx speaker, and previously worked as a Global Director on emerging technology initiatives at KPMG and Deloitte. He is the author of the upcoming book The Hitchhiker's Guide to the Singularity, which helps everyone prepare for a superintelligent AI future, and publishes The Singularity Daily, a three-minute show on the last 24 hours in AI, at peterxing.com."
+  ],
+  "help": [
+   {"title": "Keynote speaking", "text": "Keynotes at technology conferences on transhumanism, AI and the singularity, and emerging technologies. Peter has spoken at TEDxMelbourne, StartCon, Real Big Things, Rising Minds, Convergence, Gamechangers Summit, CEBIT Australia, Vivid Sydney and Singularity summits in Australia, South Africa and Colombia."},
+   {"title": "Facilitating workshops", "text": "Design-thinking workshops that help leaders understand what emerging technologies mean for their organisation and their lives, and how to seize the opportunities."}
+  ],
+  "links": [
+   {"name": "peterxing.com", "url": "https://peterxing.com"},
+   {"name": "LinkedIn", "url": "https://www.linkedin.com/in/peter-xing/"},
+   {"name": "X", "url": "https://x.com/peterxing"},
+   {"name": "Singularity Group", "url": "https://www.su.org/experts/peter-xing"},
+   {"name": "Medium", "url": "https://medium.com/@peterxing"},
+   {"name": "Instagram", "url": "https://www.instagram.com/pxing/"}
+  ],
+  "talks": [
+   {"title": "Could we all live a type of designer immortality in the near future?", "venue": "TEDxMelbourne", "url": "https://www.youtube.com/watch?v=qqYMHA-R6f4"},
+   {"title": "Living forever", "venue": "Real Big Things #22", "url": "https://www.youtube.com/watch?v=hSDBpwLaSvg"},
+   {"title": "Transhuman Coin: investing in the future of humanity", "venue": "Transhumanism Australia", "url": "https://www.youtube.com/watch?v=EGhee3ybOEg"},
+   {"title": "Exponential Africa", "venue": "SingularityU South Africa", "url": "https://www.youtube.com/watch?v=SQIx1v-GUrw"},
+   {"title": "Superhuman Summit", "venue": "Superhuman Summit", "url": "https://www.youtube.com/watch?v=RdBjmk_RwlM"},
+   {"title": "Opportunities for more automation and remote delivery of goods and services", "venue": "SingularityU Global COVID-19 Virtual Summit", "url": "https://www.youtube.com/watch?v=TofiekYN_NQ"},
+   {"title": "SingularityU Australia Summit", "venue": "SingularityU Australia", "url": "https://www.youtube.com/watch?v=tltsr1pJJxM"},
+   {"title": "Equifax SPARK", "venue": "Equifax", "url": "https://www.youtube.com/watch?v=8WD4Ip8Gi78"},
+   {"title": "Vivid Sydney", "venue": "Vivid Sydney", "url": "https://www.youtube.com/watch?v=Hdd_c5Md2_0"},
+   {"title": "KPMG Catalyst", "venue": "KPMG", "url": "https://www.youtube.com/watch?v=G6xRiEYAPlM"}
+  ],
+  "also_spoke": ["Rising Minds Sydney", "Convergence Sydney", "Gamechangers Summit", "TransVision Madrid", "SingularityU Colombia Digital Summit", "SingularityU South Africa Summit", "VR/AR Association Global Summit", "Entrepreneurs' Organization Summer School", "SingularityU Global next:Work Summit", "CEBIT Australia", "Law Society of NSW FLIP Conference", "Newcastle Writers Festival", "StartCon", "Futures Conference Sydney", "SAPN Innovation Awards", "Block Unlock Canberra"],
+  "media": [
+   {"outlet": "ABC Lateline", "title": "Transhuman: Part 1", "url": "https://www.abc.net.au/lateline/transhuman:-part-1/8298780"},
+   {"outlet": "VICE", "title": "The man who wants ageing deemed a disease", "url": "https://www.vice.com/en_au/article/8gkj83/the-man-who-wants-ageing-deemed-a-disease"},
+   {"outlet": "Channel 7 Sunrise", "title": "Cheating death", "url": "https://www.facebook.com/watch/?v=1995558854010822"},
+   {"outlet": "CGTN America", "title": "The future of artificial intelligence", "url": "https://www.youtube.com/watch?v=cAOMPGhQMho"},
+   {"outlet": "ABC News", "title": "Biohackers, transhumanists, grinders on living forever", "url": "https://www.abc.net.au/news/2017-02-23/biohackers-transhumanists-grinders-on-living-forever/8292790"},
+   {"outlet": "Singularity Hub", "title": "Coronavirus may mean automation is coming sooner than we thought", "url": "https://singularityhub.com/2020/03/19/coronavirus-may-mean-automation-is-coming-sooner-than-we-thought/"},
+   {"outlet": "Interesting Engineering", "title": "9 ways accelerated city automation will create a new normal after the pandemic", "url": "https://interestingengineering.com/9-ways-accelerated-city-automation-will-create-a-new-normal-after-the-pandemic"},
+   {"outlet": "U.S. Transhumanist Party", "title": "Virtual Enlightenment Salon with Peter Xing", "url": "https://www.youtube.com/watch?v=j3wFMRr7l8o"},
+   {"outlet": "Mind Gap", "title": "The new space race, leadership and government", "url": "https://www.youtube.com/watch?v=bLSEs_zeU2Y"},
+   {"outlet": "Archer Report", "title": "Peter Xing", "url": "https://www.youtube.com/watch?v=g45eSb6qoTE"},
+   {"outlet": "Debt Nation", "title": "Elon Musk, electric vehicles and CRISPR", "url": "https://www.youtube.com/watch?v=F6enBm6czWM"},
+   {"outlet": "Mike Walsh, Between Worlds", "title": "On automation, the blockchain and the race to build the cognitive enterprise", "url": "https://soundcloud.com/mikewalsh/peter-xing-on-automation-the-blockchain-and-the-race-to-build-the-cognitive-enterprise"},
+   {"outlet": "Silicon Republic", "title": "10 people to follow if you want a career in AI", "url": "https://www.siliconrepublic.com/people/role-models-career-ai-robotics"},
+   {"outlet": "Transhumanism Videos", "title": "Peter Xing and BioFoundry's Meow-Ludo on high-tech longevity and immortality", "url": "https://www.youtube.com/watch?v=ROtm8HPu1Sw"}
+  ],
+  "communities": "Peter has collaborated with hundreds of tech communities: future thinkers and educators (Singularity University, General Assembly), conference organisers (SXSW, StartCon, TEDxMelbourne), biohackers (BioFoundry, Grindhouse Wetware), life-extension advocates (Humanity+, Lifespan.io, London Futurists, Longecity), neurotech researchers (UTS), XR, blockchain and space communities, basic-income and effective-altruism groups, and startup mentors (Founder Institute, USYD Incubate, Slingshot, Stone & Chalk). Together, we are building a world of abundance."
+ },
+ "alysesue": {
+  "name": "Alyse Sue",
+  "role": "Co-founder, Transhumanism Australia and Transhuman Coin",
+  "headline": "Tech founder, web3 entrepreneur and software engineer.",
+  "photo": "assets/img/people/alyse-sue.webp",
+  "photo2": "assets/img/people/alyse-sue-qut.webp",
+  "photo2_alt": "Alyse Sue speaking at QUT",
+  "bio": [
+   "Alyse is a sought-after keynote speaker on web3, the metaverse, AI and transhumanism. She co-founded Transhumanism Australia and Transhuman Coin, a decentralised finance startup that supports projects using science and technology to overcome the limitations of human biology.",
+   "She has co-founded three ventures, including a genomic data machine-learning startup, mentored founders at CSIRO's ON accelerator, and was a founding member of KPMG's Innovate team. Forbes and Cointelegraph have covered her work building KPMG's metaverse business."
+  ],
+  "topics": ["Web3", "Metaverse", "AI", "Transhumanism"],
+  "events": ["BVN Futures Forum", "Blockchain Week", "Australian Computer Society", "Mumbrella MSIX", "ADMA Global Forum", "Pause Fest", "SingularityU Australia Summit", "Consult Australia FutureNet", "UTS", "University of Sydney", "QUT CEA", "Law Society of NSW", "Piper Alderman", "Transitions Film Festival"],
+  "media": [
+   {"outlet": "Forbes", "title": "Alyse Sue has been named Head of Metaverse Futures and is aiming to build a multi-million-dollar business for KPMG by 2025.", "url": "https://www.forbes.com.au/news/innovation/kpmg-goes-deep-into-the-metaverse-with-new-appointment/"},
+   {"outlet": "ausbiz", "title": "What DAOs are, and why they could be the future of governance, funding and education."},
+   {"outlet": "Cointelegraph", "title": "Metaverse 'explosion' will be driven by B2B, not retail consumers."}
+  ],
+  "brochure": "https://www.canva.com/design/DAFpEznruXA/view",
+  "email": "alysesue@transhumanism.com.au"
+ }
+}

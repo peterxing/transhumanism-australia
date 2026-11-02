@@ -1,0 +1,41 @@
+{
+ "_about": "Peter Xing's recent talks, copied from peterxing.com/author.json by tools/build.mjs --refresh.",
+ "talks": [
+  {
+   "title": "EP17: What AI adoption in the public sector actually looks like right now",
+   "venue": "Nap Stack podcast (EdgeRed)",
+   "year": "2026",
+   "url": "https://podcasts.apple.com/au/podcast/ep17-what-ai-adoption-in-the-public-sector-actually/id6789457848?i=1000791215810"
+  },
+  {
+   "title": "AI will be Running Entire Companies Autonomously says Peter Xing",
+   "venue": "Exponential Africa (Singularity South Africa)",
+   "year": "2026",
+   "url": "https://www.youtube.com/watch?v=K2e_ywxwqKM"
+  },
+  {
+   "title": "Prepare for AGI says Peter Xing: Microsoft Data &amp; AI Specialist",
+   "venue": "Exponential Africa (Singularity South Africa)",
+   "year": "2026",
+   "url": "https://www.youtube.com/watch?v=oBJ38mxmnko"
+  },
+  {
+   "title": "OpenClaw and the Rise of AI Agents | Peter Xing with Mic Mann | Exponential Africa",
+   "venue": "Exponential Africa (Singularity South Africa)",
+   "year": "2026",
+   "url": "https://www.youtube.com/watch?v=P91DZjE5nw0"
+  },
+  {
+   "title": "Peter Xing says AI Agents Will Run Your Workday by 2027!",
+   "venue": "Exponential Africa (Singularity South Africa)",
+   "year": "2026",
+   "url": "https://www.youtube.com/watch?v=6YbEO5Lqm_c"
+  },
+  {
+   "title": "ASEW 25 Day 4",
+   "venue": "Australian Software Engineering Week (ASEW), online",
+   "year": "2025",
+   "url": "https://www.youtube.com/watch?v=wolNeYAd6YY"
+  }
+ ]
+}

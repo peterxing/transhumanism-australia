@@ -1,0 +1,180 @@
+{
+ "_about": "Speakers and facilitators who have presented with Transhumanism Australia (migrated from the Squarespace site's /all-speakers page, Nov 2026). Bios are trimmed to their first sentences; edit freely.",
+ "speakers": [
+  {
+   "id": "meow-ludo-disco-gamma-meow-meow",
+   "name": "Meow-Ludo Disco Gamma Meow-Meow",
+   "cofounder": false,
+   "bio": "Meow-Ludo is an advocate for emerging technologies. He started Australia's first open access molecular biology lab, BioFoundry.",
+   "photo": "assets/img/speakers/meow-ludo-disco-gamma-meow-meow.webp"
+  },
+  {
+   "id": "alyse-sue",
+   "name": "Alyse Sue",
+   "cofounder": true,
+   "bio": "Alyse is a software developer at Palo IT and has worked in AI and Blockchain startups. Alyse is also a freelance tech writer covering AI, Transhumanism and Emerging Tech.",
+   "photo": "assets/img/speakers/alyse-sue.webp"
+  },
+  {
+   "id": "peter-simpson-young",
+   "name": "Peter Simpson-Young",
+   "cofounder": false,
+   "bio": "Peter's story with neurotechnology started from measuring levels of consciousness in a sleep lab whilst studying neuroscience, psychology, and philosophy at the University of Sydney.",
+   "photo": "assets/img/speakers/peter-simpson-young.webp"
+  },
+  {
+   "id": "dr-andrea-leong",
+   "name": "Dr Andrea Leong",
+   "cofounder": false,
+   "bio": "Andrea is a microbiologist with an interest in how we can interact with microbes beyond obliterating them with antibiotics. In 2016 she completed a PhD at UNSW and the Brien Holden Vision Institute on the ability of antimicrobial peptide surface coatings to resist infection.",
+   "photo": "assets/img/speakers/dr-andrea-leong.webp"
+  },
+  {
+   "id": "shane-greenup",
+   "name": "Shane Greenup",
+   "cofounder": false,
+   "bio": "Shane is the founder of rbutr, the creator of The Socratic Web and an expert in digital misinformation and false beliefs.",
+   "photo": "assets/img/speakers/shane-greenup.webp"
+  },
+  {
+   "id": "rowan-braham",
+   "name": "Rowan Braham",
+   "cofounder": false,
+   "bio": "Dr Rowan Braham is a Senior Innovation Engineer in the Laing O’Rourke Engineering Excellence Group, a leading centre for innovation in the engineered and build environment.",
+   "photo": "assets/img/speakers/rowan-braham.webp"
+  },
+  {
+   "id": "peter-xing",
+   "name": "Peter Xing",
+   "cofounder": true,
+   "bio": "“We’re at an inflection point of being able to cure all diseases including the ageing process, solving intelligence, and conquering scarcity to create abundance.” KPMG’s Senior Tech & Innovation Manager and Co-founder of Transhumanism Australia, Peter Xing co-founded this community that educates and invests in scientific research and technologies to enhance the human biological condition.",
+   "photo": "assets/img/speakers/peter-xing.webp"
+  },
+  {
+   "id": "nathan-waters",
+   "name": "Nathan Waters",
+   "cofounder": false,
+   "bio": "Nathan Waters is a futurist, entrepreneur and social decentralist. He is the founder the Web3 community, SydEthereum and founder of the mutual credit skill economy, Peerism in preparation for our post-capitalist future.",
+   "photo": "assets/img/speakers/nathan-waters.webp"
+  },
+  {
+   "id": "anuraj-gambhir",
+   "name": "Anuraj Gambhir",
+   "cofounder": false,
+   "bio": "Anuraj mentors organisations ranging from tech startups to large multinationals in order to spearhead their innovation agenda.",
+   "photo": "assets/img/speakers/anuraj-gambhir.webp"
+  },
+  {
+   "id": "john-shea",
+   "name": "John Shea",
+   "cofounder": false,
+   "bio": "John is a coach, mentor and trainer specialising in technology strategy and innovation. He has more than 20 years of experience in technology primarily in the startup sphere consisting of fintech, healthtech, biotech and media.",
+   "photo": "assets/img/speakers/john-shea.webp"
+  },
+  {
+   "id": "andrew-greig",
+   "name": "Andrew Greig",
+   "cofounder": false,
+   "bio": "Andrew is a Customer Success & Operations Manager at Intellify, a machine learning consultancy. He has a burning interest in the future of humanity, especially in its relation to technology.",
+   "photo": "assets/img/speakers/andrew-greig.webp"
+  },
+  {
+   "id": "beau-williams",
+   "name": "Beau Williams",
+   "cofounder": true,
+   "bio": "Beau is a co-founder of Transhumanism Australia and worked in technology consulting for Ricoh Australia and AuthO, a global leader in Identity-as-a-Service (IDaaS), provides thousands of enterprise customers with a Universal Identity Platform for their web, mobile, IoT, and internal applications.",
+   "photo": "assets/img/speakers/beau-williams.webp"
+  },
+  {
+   "id": "sam-barton",
+   "name": "Sam Barton",
+   "cofounder": false,
+   "bio": "Sam is the host of \"Talk of Today\", a podcast where he interviews experts about developments in the world and what they could mean for the future. Sam is currently studying philosophy and complexity science at the University of Sydney.",
+   "photo": "assets/img/speakers/sam-barton.webp"
+  },
+  {
+   "id": "skeeve-stevens",
+   "name": "Skeeve Stevens",
+   "cofounder": false,
+   "bio": "Skeeve is a Futurist, Transhumanist, entrepreneur, and technology polymath. He specialises in such areas as Future Crime, Internet Architecture, Virtual & Augmented Reality, Machine Intelligence, Computer Vision, Robotics, IoT, Smart Cities, Brainwear, Biohacking and Superhuman Performance.",
+   "photo": "assets/img/speakers/skeeve-stevens.webp"
+  },
+  {
+   "id": "shanti-korporaal",
+   "name": "Shanti Korporaal",
+   "cofounder": false,
+   "bio": "Shanti is a Futurist, Serial Entrepreneur, Speaker, Facilitator, Whisky Chick and most of all, lives for Lightbulb moments. She is co-founder and Director of Future Sumo, VR the World, Chip My Life, Niisch, eintellego Networks, eintellego Networks and Elastic Venues, with her husband, Skeeve.",
+   "photo": "assets/img/speakers/shanti-korporaal.webp"
+  },
+  {
+   "id": "tim-cannon",
+   "name": "Tim Cannon",
+   "cofounder": false,
+   "bio": "Tim is a futurist, grinder, and CEO and co-founder of Livestock Labs, a startup based in Sydney's Cicada Innovations which has developed an implantable health tracker for your livestock.",
+   "photo": "assets/img/speakers/tim-cannon.webp"
+  },
+  {
+   "id": "dr-james-jansson",
+   "name": "Dr James Jansson",
+   "cofounder": false,
+   "bio": "James is the deputy leader of the Science Party. James Jansson grew up in Sydney’s west as the eldest of 6 children.",
+   "photo": "assets/img/speakers/dr-james-jansson.webp"
+  },
+  {
+   "id": "jonathan-woods",
+   "name": "Jonathan Woods",
+   "cofounder": false,
+   "bio": "Jonathan is a passionate technologist with a desire to disrupt current practices in science, medicine and finance to improve the world and humanity.",
+   "photo": "assets/img/speakers/jonathan-woods.webp"
+  },
+  {
+   "id": "ian-woolf",
+   "name": "Ian Woolf",
+   "cofounder": false,
+   "bio": "Ian Woolf is a broadcaster, science journalist, and writer who lives in Sydney, and produces, presents, interviews, writes and edits for the weekly Diffusion Science Radio weekly radio show and podcast.",
+   "photo": "assets/img/speakers/ian-woolf.webp"
+  },
+  {
+   "id": "avinash-singh",
+   "name": "Avinash Singh",
+   "cofounder": false,
+   "bio": "Avinash Singh is a researcher at the University of Technology Sydney, working on Brain Computer Interfaces. In addition, his research interests include Neural Engineering, Cognitive Neuroscience, Transhumanism, and Longevity.",
+   "photo": "assets/img/speakers/avinash-singh.webp"
+  },
+  {
+   "id": "stefan-van-der-wel",
+   "name": "Stefan van der Wel",
+   "cofounder": false,
+   "bio": "Stefan is a technology strategist, AI enthusiast, and lucid dreamer. He is passionate about the workings of consciousness in intelligent entities, including the philosophical debate as well as the latest physiological discoveries through science and technology.",
+   "photo": "assets/img/speakers/stefan-van-der-wel.webp"
+  },
+  {
+   "id": "brendan-clarke",
+   "name": "Brendan Clarke",
+   "cofounder": true,
+   "bio": "Brendan works in Proxy Operations at the Commonwealth Bank of Australia and is a co-founder of Transhumanism Australia. Brendan ran as the Science Party Candidate for Berowra in the 2016 Australian Federal Election.",
+   "photo": "assets/img/speakers/brendan-clarke.webp"
+  },
+  {
+   "id": "leo-maybe",
+   "name": "Leo Maybe",
+   "cofounder": false,
+   "bio": "Leo is passionate about technogaianism . Leo has over 20 years’ experience in the information technology space.",
+   "photo": "assets/img/speakers/leo-maybe.webp"
+  },
+  {
+   "id": "andrew-despi",
+   "name": "Andrew Despi",
+   "cofounder": false,
+   "bio": "Andrew is a Director of Ecosystems at artificial intelligence company, a·kin AI . He is building partnerships to enable a·kin to improve human wellbeing at scale.",
+   "photo": "assets/img/speakers/andrew-despi.webp"
+  },
+  {
+   "id": "james-ferguson",
+   "name": "James Ferguson",
+   "cofounder": false,
+   "bio": "James is a Genomic Systems Analyst in the Genomic Technologies team at the Garvan Institute of Medical Research. James has contributed to multiple publications in the field of genomic research.",
+   "photo": "assets/img/speakers/james-ferguson.webp"
+  }
+ ]
+}

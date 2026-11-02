@@ -1,0 +1,26 @@
+{
+ "_about": "Transhumanism Australia and its people in the media (migrated from the Squarespace /media and /peterxing pages). The first items show on the home page.",
+ "items": [
+  {"outlet": "ABC Lateline", "title": "Transhuman: Part 1", "url": "http://www.abc.net.au/lateline/transhuman:-part-1/8298780", "kind": "TV"},
+  {"outlet": "ABC News", "title": "Transhumanists, biohackers, grinders: who are they and can they really live forever?", "url": "https://www.abc.net.au/news/2017-02-23/biohackers-transhumanists-grinders-on-living-forever/8292790", "year": "2017", "kind": "News"},
+  {"outlet": "Channel 7 Weekend Sunrise", "title": "Could young Aussies live for ever? Meet the transhumanist who says ageing is a disease we can cure", "url": "https://www.facebook.com/transhumanismau/videos/1995558854010822/", "kind": "TV"},
+  {"outlet": "VICE", "title": "The man who wants ageing deemed a disease", "url": "https://www.vice.com/en_au/article/8gkj83/the-man-who-wants-ageing-deemed-a-disease", "kind": "News"},
+  {"outlet": "TEDxMelbourne", "title": "Could we all live a type of designer immortality in the near future?", "url": "https://www.youtube.com/watch?v=qqYMHA-R6f4", "kind": "Talk"},
+  {"outlet": "CGTN America", "title": "Peter Xing discusses the advancements in AI", "url": "https://www.youtube.com/watch?v=cAOMPGhQMho", "kind": "TV"},
+  {"outlet": "Singularity Hub", "title": "Coronavirus may mean automation is coming sooner than we thought", "url": "https://singularityhub.com/2020/03/19/coronavirus-may-mean-automation-is-coming-sooner-than-we-thought/", "year": "2020", "kind": "Article"},
+  {"outlet": "ABC Radio AM", "title": "Bio breakthroughs putting the holy grail of endless life within reach", "url": "http://www.abc.net.au/am/content/2016/s4561837.htm", "year": "2016", "kind": "Radio"},
+  {"outlet": "9 News Sydney", "title": "Biohacking and chipping", "url": "https://www.facebook.com/9News/posts/meow-ludo-disco-gamma-meow/1699629370084893/", "kind": "TV"},
+  {"outlet": "Channel 10 The Project", "title": "Are you always misplacing your train ticket? We have a solution", "url": "https://www.facebook.com/TheProjectTV/videos/10154723013718441/", "kind": "TV"},
+  {"outlet": "7 News Sydney", "title": "Transport for NSW threatening to cancel an implanted Opal card", "url": "https://www.facebook.com/7newssydney/videos/2005617532795703/", "kind": "TV"},
+  {"outlet": "ABC News", "title": "Opal card implanted into Sydney man Meow-Meow could be deactivated by NSW authorities", "url": "http://www.abc.net.au/news/2017-06-28/opal-card-meow-meow-implant-could-be-deactivated-by-authorities/8658986", "year": "2017", "kind": "News"},
+  {"outlet": "HuffPost", "title": "Meow-Ludo Disco Gamma Meow-Meow really wants you to care about science", "url": "http://www.huffingtonpost.com.au/2016/06/17/meow-ludo-disco-gamma-meow-meow-really-wants-you-to-care-about-s/", "year": "2016", "kind": "News"},
+  {"outlet": "ABC TV", "title": "The AI Race (documentary)", "url": "https://www.dailymotion.com/video/x6jih4j", "kind": "TV"},
+  {"outlet": "triple j", "title": "Sunday Night Safran with transhumanist Leandro Brun", "kind": "Radio"},
+  {"outlet": "2SER Think: Digital Futures", "title": "From grinders to mind uploaders: the growing transhumanism movement", "url": "https://soundcloud.com/thinkdigitalfutures/will-man-become-machine-in-2045", "kind": "Radio"},
+  {"outlet": "Mike Walsh, Between Worlds", "title": "Peter Xing on automation, the blockchain and the race to build the cognitive enterprise", "url": "https://soundcloud.com/mikewalsh/peter-xing-on-automation-the-blockchain-and-the-race-to-build-the-cognitive-enterprise", "kind": "Podcast"},
+  {"outlet": "Silicon Republic", "title": "10 people to follow if you want a career in AI", "url": "https://www.siliconrepublic.com/people/role-models-career-ai-robotics", "kind": "Article"},
+  {"outlet": "Lost Tapes", "title": "Transhumanism with Pete Williams and Peter Xing", "url": "https://soundcloud.com/user-692240356/lost-tapes-transhumanism-with-pete-williams-and-peter-xing", "kind": "Podcast"},
+  {"outlet": "Triple H Streetbeat", "title": "Interview with Science Party candidate for Berowra, Brendan Clarke", "url": "https://www.mixcloud.com/StreetbeatHHH/streetbeat-interviews-brendan-clarke-science-party-candidate-for-berowra/", "kind": "Radio"},
+  {"outlet": "Questionable Content", "title": "#4: Simulated transhuman overlords", "url": "https://www.youtube.com/watch?v=Uo8XTqG1EUE", "kind": "Video"}
+ ]
+}

@@ -1,0 +1,51 @@
+{
+ "_about": "Refreshed from Eventbrite by tools/build.mjs --refresh (twice a day in GitHub Actions): `upcoming` mirrors the organiser's live, non-cancelled events; when an event ends it moves to `past` (newest first) and stays there. `overrides` (keyed by Eventbrite event id) lets you add a talk title or speaker, or hide an event, without touching Eventbrite.",
+ "updated": "2026-11-01T23:26:42.411Z",
+ "organizer": {
+  "followers": "208",
+  "hostingYears": "8 years",
+  "totalEvents": 97,
+  "attendeesHosted": "1.4k"
+ },
+ "upcoming": [
+  {
+   "id": "2004177230046",
+   "url": "https://www.eventbrite.com.au/e/ai-singularity-syndicate-monthly-meetup-tickets-2004177230046",
+   "name": "AI Singularity Syndicate Monthly Meetup",
+   "start": "2026-11-27T18:00:00+11:00",
+   "end": "2026-11-27T20:30:00+11:00",
+   "status": "EventScheduled",
+   "online": false,
+   "venue": "Australian Catholic University, North Sydney Campus",
+   "address": "40 Edward Street, North Sydney, NSW 2060",
+   "area": "North Sydney, NSW",
+   "lat": "-33.8374039",
+   "lng": "151.2034243",
+   "description": "We talk about all things AI and don’t hold back on where we think we are in regards to the singularity",
+   "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1186331740%2F69543884227%2F1%2Foriginal.20260607-073907?crop=focalpoint&fit=crop&w=940&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=9e7a67682b96d1bebfda5d50f1f32117",
+   "free": true,
+   "price": "Free"
+  }
+ ],
+ "past": [
+  {
+   "id": "2002668240618",
+   "name": "AI Singularity Syndicate Monthly Meetup",
+   "url": "https://www.eventbrite.com.au/e/ai-singularity-syndicate-monthly-meetup-tickets-2002668240618",
+   "start": "2026-10-30T18:00:00+11:00",
+   "end": "2026-10-30T20:30:00+11:00",
+   "venue": "Torrens University Australia, Sydney, Surry Hills campus",
+   "address": "37 Foveaux Street, Surry Hills, NSW 2010",
+   "area": "Surry Hills, NSW",
+   "description": "We talk about all things AI and don't hold back on where we think we are in regards to the singularity.",
+   "free": true,
+   "price": "Free"
+  }
+ ],
+ "overrides": {
+  "2002668240618": {
+   "talk": "The last month of the singularity",
+   "speaker": "Peter Xing"
+  }
+ }
+}

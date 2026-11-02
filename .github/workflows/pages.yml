@@ -1,0 +1,64 @@
+name: Build and deploy
+
+on:
+  push:
+    branches: [main]
+  schedule:
+    # 06:15 and 18:15 Sydney summer time (05:15 / 17:15 in winter): new Eventbrite events, the morning's Radar
+    - cron: '15 19 * * *'
+    - cron: '15 7 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+      - uses: actions/configure-pages@v6
+
+      - name: Refresh events, the Radar and recent talks (scheduled and manual runs)
+        if: github.event_name != 'push'
+        run: node tools/build.mjs --refresh
+
+      - name: Build from the committed data (pushes)
+        if: github.event_name == 'push'
+        run: node tools/build.mjs
+
+      - name: Commit refreshed data
+        if: github.event_name != 'push'
+        run: |
+          if [ -n "$(git status --porcelain data)" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add data
+            git commit -m "Refresh events and the Radar" -q
+            git push -q || echo "push failed (a newer commit landed); the next run will catch up"
+          else
+            echo "no data changes"
+          fi
+
+      - uses: actions/upload-pages-artifact@v5
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v5

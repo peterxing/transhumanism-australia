@@ -1,0 +1,25 @@
+{
+ "_about": "Venues that have hosted our meetups, and organisations we've partnered with over the years (from the Squarespace /partners page).",
+ "venues": [
+  {"name": "Torrens University Australia", "place": "Surry Hills", "url": "https://www.torrens.edu.au/campuses/sydney/surry-hills-sydney"},
+  {"name": "Australian Catholic University", "place": "North Sydney", "url": "https://www.acu.edu.au/locations/north-sydney"},
+  {"name": "Stone & Chalk", "place": "Sydney Startup Hub", "url": "https://www.stoneandchalk.com.au"}
+ ],
+ "partners": [
+  {"name": "SingularityU Australia Summit (now WAVIA)", "url": "https://wavia.global/en-au/"},
+  {"name": "Lifespan.io", "url": "https://www.lifespan.io"},
+  {"name": "Science, Technology & the Future", "url": "https://www.meetup.com/science-technology-and-the-future/"},
+  {"name": "U.S. Transhumanist Party"},
+  {"name": "General Assembly"},
+  {"name": "Science Party Australia"},
+  {"name": "Flux Party"},
+  {"name": "SydEthereum"},
+  {"name": "BioFoundry"},
+  {"name": "Effective Altruism Sydney"},
+  {"name": "CellAge"},
+  {"name": "OrbitOz"},
+  {"name": "Basic Income Australia"},
+  {"name": "Diffusion Science Radio"},
+  {"name": "Future Faqtory"}
+ ]
+}

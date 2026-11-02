@@ -1,0 +1,105 @@
+{
+ "_about": "Everything a visitor reads that isn't fetched automatically. Edit, commit and push: the site rebuilds in about a minute. Events, the Eventbrite numbers and the Radar refresh themselves every morning (see README).",
+ "name": "Transhumanism Australia",
+ "legal": "Transhumanism Pty Ltd",
+ "url": "https://transhuman.com.au",
+ "email": "info@transhumanism.com.au",
+ "address": "Stone & Chalk, Level 4, 11 York Street, Sydney NSW 2000",
+ "tagline": "Live longer. Feel better. Think bigger.",
+ "description": "Australia's transhumanist community: monthly meetups in Sydney on AI and the singularity, longevity, wellbeing and every emerging technology that makes us more than human. Join from A$5 a month, with 14 days free.",
+
+ "membership": {
+  "name": "Member",
+  "price": "A$5",
+  "period": "month",
+  "trial_days": 14,
+  "url": "https://buy.stripe.com/fZeg0N9I557nfO8aEE",
+  "payment_methods": "Card or Australian bank account (BECS direct debit)",
+  "pitch": "Membership is how the movement grows. It keeps our meetups free and open to everyone, and it puts you in the room with the people building a longer, healthier, smarter future.",
+  "benefits": [
+   {"title": "Keep the meetups free", "text": "Your support keeps every monthly meetup free and open, and brings great speakers to Sydney."},
+   {"title": "Member deep-dives", "text": "Guided tutorials and deep-dives on AI, longevity, neurotech and more, so you learn by doing."},
+   {"title": "Meet the builders", "text": "Founders, researchers, investors and biohackers working on transhuman technology."},
+   {"title": "Hear it first", "text": "New events, projects and opportunities across our network, before anyone else."}
+  ]
+ },
+
+ "eventbrite": {
+  "organizer_id": "16827662816",
+  "organizer_url": "https://www.eventbrite.com.au/o/transhumanism-australia-16827662816",
+  "aff": "transhumancomau"
+ },
+
+ "calendly": "https://calendly.com/peterxing",
+ "youtube": "https://www.youtube.com/transhumanismvideos",
+ "merch": "http://transhuman.deco-apparel.com/",
+ "telegram": "https://t.me/transhumanismAU",
+ "social": [
+  {"name": "Eventbrite", "url": "https://www.eventbrite.com.au/o/transhumanism-australia-16827662816"},
+  {"name": "LinkedIn", "url": "https://www.linkedin.com/company/transhumanism"},
+  {"name": "Instagram", "url": "https://www.instagram.com/transhumanismau"},
+  {"name": "Facebook", "url": "https://www.facebook.com/transhumanismau"},
+  {"name": "YouTube", "url": "https://www.youtube.com/transhumanismvideos"},
+  {"name": "Telegram", "url": "https://t.me/transhumanismAU"}
+ ],
+
+ "supers": [
+  {
+   "id": "longevity",
+   "name": "Super Longevity",
+   "glyph": "∞",
+   "line": "Make ageing optional.",
+   "text": "Ageing drives most chronic disease, so we follow the science that keeps bodies young: rejuvenation therapies, gene and cell therapy, senolytics, epigenetic reprogramming, ageing clocks, organ replacement and biostasis.",
+   "topics": ["Rejuvenation biotech", "Gene and cell therapy", "Senolytics", "Epigenetic reprogramming", "Ageing clocks and biomarkers", "Organ replacement", "Cryonics and biostasis", "Longevity medicine"]
+  },
+  {
+   "id": "wellbeing",
+   "name": "Super Wellbeing",
+   "glyph": "^",
+   "line": "Raise the floor and the ceiling of human experience.",
+   "text": "A longer, smarter life should also feel better. We explore technology for mental health and flourishing: neurostimulation, psychedelic science, sleep, wearables and biofeedback, immersive XR, and abundance, from universal basic income to the end of drudgery.",
+   "topics": ["Mental health tech", "Neurostimulation", "Psychedelic science", "Sleep and recovery", "Wearables and biofeedback", "XR and presence", "Universal basic income", "Abundance"]
+  },
+  {
+   "id": "intelligence",
+   "name": "Super Intelligence",
+   "glyph": "+",
+   "line": "Amplify every mind.",
+   "text": "Intelligence is compounding faster than anything in history. We track frontier AI and the road to superintelligence, AI agents, brain–computer interfaces, neurotech and cognitive enhancement, and what it all means for work and society.",
+   "topics": ["Frontier AI and AGI", "AI agents", "Brain–computer interfaces", "Neurotech", "Cognitive enhancement", "Whole-brain emulation", "AI safety", "The singularity"]
+  }
+ ],
+ "frontier": {
+  "title": "And everything that gets us there",
+  "text": "Transhumanism is a whole-stack project. We cover the enabling technologies too.",
+  "topics": ["Robotics", "Nanotech", "Synthetic biology", "Quantum", "XR", "Web3 and network states", "Space", "Energy", "3D printing", "Open science"]
+ },
+
+ "what_we_do": [
+  {"id": "meetups", "title": "Meetups and talks", "text": "The AI Singularity Syndicate meets every month in Sydney: talks, debate and plenty of time to meet people who think the future is worth building. Talks go up on our YouTube channel.", "cta": "See upcoming events", "href": "events"},
+  {"id": "keynotes", "title": "Keynotes and workshops", "text": "Keynotes and hands-on workshops on transhumanism and emerging technology, from generative AI and brain–computer interfaces to robotics, biotech and healthy longevity.", "cta": "Book a speaker", "href": "speakers"},
+  {"id": "venture", "title": "Venture studio", "text": "We educate, incubate, accelerate and invest in projects for the transhumanism movement with partners such as WAVIA, as part of the Transhuman Network State.", "cta": "Pitch your project", "href": "investment"}
+ ],
+
+ "network": [
+  {"name": "The Hitchhiker's Guide to the Singularity", "text": "Peter Xing's book of dated forecasts about superintelligence, checked against the news every morning by The Singularity Daily.", "url": "https://peterxing.com"},
+  {"name": "Transhuman Coin", "text": "The community currency of the transhumanism movement, funding transhuman research and projects.", "url": "https://transhumancoin.finance"},
+  {"name": "WAVIA", "text": "Deep-tech advisory, accounting and grants for founders creating impact with exponential technologies (formerly SingularityU Australia).", "url": "https://wavia.global/en-au/"},
+  {"name": "Brain–computer interfaces", "text": "Our dream-decoding BCI project with the Australian Artificial Intelligence Institute at UTS, demoed at SXSW Sydney.", "url": "bci"},
+  {"name": "Wise Mirror", "text": "A creative AI studio flipping Black Mirror's dystopias into stories of a future we want to live in.", "url": "https://wisemirror.org"},
+  {"name": "Singularity Group", "text": "Our co-founder Peter Xing is expert faculty on transhumanism and emerging tech.", "url": "https://www.su.org/experts/peter-xing"},
+  {"name": "Singular Enterprises", "text": "Part of the Transhuman Network State."},
+  {"name": "GemsbokGPT", "text": "Part of the Transhuman Network State, connecting us with Johannesburg.", "url": "https://gemsbokgpt.com"}
+ ],
+
+ "faq": [
+  {"q": "What is transhumanism?", "a": "A global movement dedicated to using science and technology to extend our healthy lifespans, enhance our intelligence and improve our wellbeing: super longevity, super intelligence and super wellbeing."},
+  {"q": "Do I need to be a member to come to a meetup?", "a": "No. Our meetups are free and open to everyone; just RSVP on Eventbrite so we know you're coming. Membership is how you support the community and get the member extras."},
+  {"q": "What does membership cost?", "a": "A$5 a month after a 14-day free trial, paid by card or Australian bank account through Stripe. It renews monthly until you cancel."},
+  {"q": "How do I cancel?", "a": "Email info@transhumanism.com.au at any time and we'll cancel your membership. No questions asked."},
+  {"q": "Where are the meetups?", "a": "In Sydney, at partner venues such as Torrens University in Surry Hills and the Australian Catholic University in North Sydney. Each event page has the exact address."},
+  {"q": "Can I speak, host, sponsor or pitch a project?", "a": "Yes, please. Email info@transhumanism.com.au, or book a time with Peter to talk about your project."}
+ ],
+
+ "media_logos": ["ABC", "Channel 7 Sunrise", "9 News", "The Project", "VICE", "HuffPost", "CGTN America", "triple j", "2SER", "TEDxMelbourne"]
+}

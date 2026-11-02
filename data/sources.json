@@ -1,0 +1,31 @@
+{
+ "_about": "Where the Transhuman Radar gets its headlines. Every morning tools/build.mjs --refresh reads these feeds, keeps the last `max_age_days` of items, sorts each into a pillar and writes data/radar.json. mode 'fixed' puts every item in `pillar`; 'classify' sorts by the keywords below and falls back to `pillar` (or drops the item when `pillar` is null); \"match\": \"title\" makes a broad source count title keywords only. Weight lifts a source's items (1 = normal). Headlines link to the publisher; nothing else is copied.",
+ "max_age_days": 10,
+ "per_pillar": 12,
+ "per_source": 3,
+ "sources": [
+  {"name": "The Singularity Daily", "type": "singularity-daily", "url": "https://peterxing.github.io/singularity-daily/daily/data/", "site": "https://peterxing.com", "pillar": "intelligence", "mode": "fixed", "weight": 3},
+  {"name": "MIT Technology Review", "url": "https://www.technologyreview.com/topic/artificial-intelligence/feed", "pillar": "intelligence", "mode": "fixed", "weight": 2},
+  {"name": "Lifespan.io", "url": "https://www.lifespan.io/feed/", "pillar": "longevity", "mode": "fixed", "weight": 3},
+  {"name": "Longevity.Technology", "url": "https://longevity.technology/feed/", "pillar": "longevity", "mode": "fixed", "weight": 2},
+  {"name": "Fight Aging!", "url": "https://www.fightaging.org/feed/", "pillar": "longevity", "mode": "fixed", "weight": 1, "exclude": "newsletter"},
+  {"name": "ScienceDaily", "url": "https://www.sciencedaily.com/rss/health_medicine/healthy_aging.xml", "pillar": "longevity", "mode": "fixed", "weight": 1},
+  {"name": "Greater Good Magazine", "url": "https://greatergood.berkeley.edu/site/rss/articles", "pillar": "wellbeing", "mode": "fixed", "weight": 3},
+  {"name": "ScienceDaily", "url": "https://www.sciencedaily.com/rss/mind_brain.xml", "pillar": null, "mode": "classify", "match": "title", "weight": 1},
+  {"name": "Neuroscience News", "url": "https://neurosciencenews.com/feed/", "pillar": null, "mode": "classify", "match": "title", "weight": 1},
+  {"name": "PsyPost", "url": "https://www.psypost.org/feed/", "pillar": null, "mode": "classify", "match": "title", "weight": 1},
+  {"name": "Singularity Hub", "url": "https://singularityhub.com/feed/", "pillar": "frontier", "mode": "classify", "weight": 2, "exclude": "awesome tech stories"},
+  {"name": "IEEE Spectrum", "url": "https://spectrum.ieee.org/feeds/topic/robotics.rss", "pillar": "frontier", "mode": "fixed", "weight": 2},
+  {"name": "Tech Xplore", "url": "https://techxplore.com/rss-feed/robotics-news/", "pillar": "frontier", "mode": "fixed", "weight": 1},
+  {"name": "Phys.org", "url": "https://phys.org/rss-feed/nanotech-news/", "pillar": "frontier", "mode": "fixed", "weight": 1},
+  {"name": "ScienceDaily", "url": "https://www.sciencedaily.com/rss/computers_math/quantum_computers.xml", "pillar": "frontier", "mode": "fixed", "weight": 1},
+  {"name": "New Atlas", "url": "https://newatlas.com/index.rss", "pillar": null, "mode": "classify", "match": "title", "weight": 1}
+ ],
+ "exclude_titles": "newsletter|sponsored|webinar|podcast:|deal of the day|discount|black friday|giveaway|horoscope|STAT\\+|video friday|this week'?s awesome|\\bvote\\b|politic|election|camping|trailer|caravan",
+ "keywords": {
+  "longevity": "\\bageing\\b|\\baging\\b|age-related|longevity|lifespan|healthspan|senescen|senolytic|rejuvenat|reprogramm|epigenetic clock|biological age|telomer|rapamycin|alzheimer|dementia|neurodegenerat|parkinson|frailty|sarcopenia|gene therap|gene editing|crispr|stem cells?\\b|xenotransplant|organ transplant|cryonic|cryopreserv|biostasis|older adults|live longer|centenarian|immortal|mitochondri|nad\\+|geroscience|anti-aging|anti-ageing|glp-1",
+  "wellbeing": "wellbeing|well-being|happiness|happier|\\bhappy\\b|mental health|depress|anxiety|\\bstress(ed|ful)?\\b|loneliness|lonely|\\bmoods?\\b|mindful|meditat|psychedelic|psilocybin|\\bmdma\\b|ketamine|\\blsd\\b|\\bsleep(ing)?\\b|insomnia|\\bptsd\\b|burnout|resilien|flourish|life satisfaction|gratitude|compassion|kindness|social connection|chronic pain|neurostimulation|brain stimulation|\\btms\\b|vagus|universal basic income|\\bubi\\b|purpose in life|optimism|\\bawe\\b|\\bjoy(ful)?\\b|therapy for",
+  "intelligence": "\\bai\\b|a\\.i\\.|artificial intelligence|machine learning|\\bllms?\\b|language model|chatbot|\\bgpt|openai|anthropic|\\bclaude\\b|\\bgemini\\b|deepmind|\\bagi\\b|superintelligen|neural network|ai agent|brain-computer|brain–computer|\\bbcis?\\b|neural implant|neuralink|neurotech|cognitive enhancement|nootropic|brain emulation|mind upload|singularity|alignment",
+  "frontier": "robot|humanoid|\\bdrones?\\b|nanotech|nanoparticle|nanomaterial|quantum|\\bfusion\\b|batter(y|ies)|\\bsolar\\b|spacecraft|spaceflight|space station|space telescope|\\bnasa\\b|spacex|astronaut|\\bmars\\b|\\blunar\\b|\\bmoon\\b|rocket|satellite|3d[- ]print|synthetic biology|\\bxr\\b|virtual reality|augmented reality|metaverse|blockchain|\\bcrypto|web3|semiconductor|\\bchips?\\b|exoskeleton|prosthe|bionic|implant|self-driving|mecha\\b"
+ }
+}
