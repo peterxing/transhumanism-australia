@@ -11,6 +11,8 @@ It replaces the old Squarespace site with a fast static site on GitHub Pages tha
 3. **Cover all of transhumanism, not just AI.** The three supers from the original brand, super longevity (∞, green),
    super wellbeing (^, yellow) and super intelligence (+, blue), plus the frontier tech that gets us there, with a daily
    **Transhuman Radar** of fresh headlines and the latest episode of The Singularity Daily from peterxing.com.
+4. **Publish The Transhuman Daily.** A 3-minute video of the last 24 hours in transhumanism, every morning, on the home page
+   and at `/daily`, with every story's evidence and sources (see "The Transhuman Daily" below).
 
 ## Pages
 
@@ -21,6 +23,7 @@ It replaces the old Squarespace site with a fast static site on GitHub Pages tha
 | `/next` | Always forwards to the next meetup's Eventbrite page. Use it in bios, slides and QR codes |
 | `/join` | Membership landing page (good for QR codes at meetups) |
 | `/radar` | This week's headlines in each pillar, and the sources |
+| `/daily`, `/daily/<date>` | The Transhuman Daily: the newest episode and every episode, each with its stories, their evidence and sources |
 | `/speakers`, `/peterxing`, `/alysesue` | Speakers and the co-founders' profiles (Peter's recent talks sync from peterxing.com) |
 | `/investment` | The venture studio |
 | `/bci` | The brain–computer interface project with UTS |
@@ -49,6 +52,20 @@ To change the membership price or Stripe Payment Link, edit `membership` in `dat
 `utm_source=transhuman.com.au` and a `utm_content` naming the button (hero, header, footer, mobile-bar, final, home,
 events, join-page), so the Stripe dashboard shows which buttons convert. Eventbrite links carry `aff=transhumancomau`
 for Eventbrite's tracking-link reports.
+
+## The Transhuman Daily
+
+A daily Scout automation ("The Transhuman Daily — 3-min highlights for Transhumanism Australia", 7am with a 1pm retry) makes
+the show in `Documents\Microsoft Scout\Transhuman-Daily` (a fork of the Microsoft for Education Daily engine): it scans the
+science and tech news by pillar, verifies every story with an honest evidence level, renders the video (its end card promotes
+the next meetup from `data/events.json`, with a QR code to `/next`), then:
+
+- publishes it here with `engine\build\publish.py`: the episode, its stories and media under `daily/` (`daily/data/index.json`,
+  `daily/data/episodes/<date>.json`, `daily/media/<date>/`, `daily/feed.xml`) and the video as the GitHub release
+  `td-ep-<date>`; the build renders the home-page section, `/daily` and `/daily/<date>`, and `tools/daily-videos.mjs` copies
+  the newest three videos into Pages so they play inline on iPhones;
+- posts the video to Transhumanism Australia's LinkedIn page and Facebook Page (`engine\build\social.js`, from Peter's Edge),
+  each caption ending with the episode's link here.
 
 ## How it runs
 
