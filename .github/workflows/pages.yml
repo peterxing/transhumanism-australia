@@ -49,6 +49,11 @@ jobs:
             echo "no data changes"
           fi
 
+      - name: Put the newest Transhuman Daily videos on Pages
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: node tools/daily-videos.mjs
+
       - uses: actions/upload-pages-artifact@v5
         with:
           path: _site

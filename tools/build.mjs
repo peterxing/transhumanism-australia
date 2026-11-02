@@ -50,8 +50,15 @@ if (args.has('--refresh')) {
   } else if (pt.status === 'rejected') log('peter talks refresh failed:', pt.reason?.message || pt.reason);
 }
 
+const daily = readJson(path.join(ROOT, 'daily', 'data', 'index.json'), { episodes: [] });
+const dailyEpisodes = {};
+for (const e of daily.episodes || []) {
+  const ep = readJson(path.join(ROOT, 'daily', 'data', 'episodes', `${e.date}.json`), null);
+  if (ep) dailyEpisodes[e.date] = ep;
+}
+
 const ctx = {
-  site, events, radar, sources, peterTalks, now,
+  site, events, radar, sources, peterTalks, now, daily, dailyEpisodes,
   speakers: readJson(D('speakers.json')),
   people: readJson(D('people.json')),
   media: readJson(D('media.json')),
@@ -64,6 +71,8 @@ const files = renderSite(ctx);
 fs.rmSync(OUT, { recursive: true, force: true });
 fs.mkdirSync(OUT, { recursive: true });
 fs.cpSync(path.join(ROOT, 'assets'), path.join(OUT, 'assets'), { recursive: true });
+// the Transhuman Daily's data, media and feed (written by its publisher); the newest videos are added by tools/daily-videos.mjs
+if (fs.existsSync(path.join(ROOT, 'daily'))) fs.cpSync(path.join(ROOT, 'daily'), path.join(OUT, 'daily'), { recursive: true });
 fs.mkdirSync(path.join(OUT, 'data'), { recursive: true });
 for (const f of ['events.json', 'radar.json']) fs.copyFileSync(D(f), path.join(OUT, 'data', f));
 for (const [rel, content] of Object.entries(files)) {
@@ -73,4 +82,4 @@ for (const [rel, content] of Object.entries(files)) {
 }
 if (site.cname) fs.writeFileSync(path.join(OUT, 'CNAME'), site.cname + '\n');
 fs.writeFileSync(path.join(OUT, '.nojekyll'), '');
-log(`wrote ${Object.keys(files).length} files to ${path.relative(ROOT, OUT)}/ (next event: ${(events.upcoming || [])[0]?.start || 'none'}; radar items: ${(radar.items || []).length})`);
+log(`wrote ${Object.keys(files).length} files to ${path.relative(ROOT, OUT)}/ (next event: ${(events.upcoming || [])[0]?.start || 'none'}; radar items: ${(radar.items || []).length}; daily episodes: ${(daily.episodes || []).length})`);

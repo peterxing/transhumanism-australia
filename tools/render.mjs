@@ -77,10 +77,38 @@ ${countdown(ev)}
   const sdCard = (f = radar.featured) => !f ? '' : `<a class="sd-card" href="${esc(f.url)}" target="_blank" rel="noopener">
 ${f.thumb ? `<img src="${esc(f.thumb)}" alt="" width="320" height="180" loading="lazy" decoding="async">` : ''}<div><span class="k">${icon.play({ size: 14 })} Watch · 3 min · ${esc(f.day || '')}</span><h3>The Singularity Daily · EP.${String(f.ep).padStart(3, '0')}</h3><p class="sd-hook">${esc(f.hook)}</p>${f.titles?.[0] ? `<p class="muted">${esc(f.titles[0])}</p>` : ''}<span class="go">The last 24 hours in AI, every day, on peterxing.com ${icon.arrow({ size: 16 })}</span></div></a>`;
 
+  // ------------------------------------------------------------------ the Transhuman Daily (Transhuman-Daily\engine\build\publish.py writes daily/)
+  const DI = ctx.daily || { episodes: [] };
+  const EPS = DI.episodes || [];
+  const EPD = ctx.dailyEpisodes || {};
+  const PNAME = { longevity: 'Super longevity', wellbeing: 'Super wellbeing', intelligence: 'Super intelligence', frontier: 'Frontier tech' };
+  const epNo = e => 'EP.' + String(e.ep).padStart(3, '0');
+  const epDay = (e, style = 'short') => fmt(`${e.date}T12:00:00+11:00`, style);
+  const epVideo = e => {
+    const poster = e.cover || '';
+    if (e.video && e.video.pages) return `<video class="ep-video" controls playsinline preload="metadata"${poster ? ` poster="${esc(poster)}"` : ''} src="${esc(e.video.file)}"></video>`;
+    const img = poster ? `<img src="${esc(poster)}" alt="" width="1280" height="720" loading="lazy" decoding="async">` : '';
+    if (e.video) return `<a class="ep-video ep-poster" href="${esc(e.video.release)}" target="_blank" rel="noopener">${img}<span>${icon.play({ size: 22 })} Watch (${esc(e.video.mb)} MB download)</span></a>`;
+    return img ? `<div class="ep-video ep-poster">${img}</div>` : '';
+  };
+  const epStory = s => `<li class="ep-story" data-pillar="${esc(s.pillar)}"><span class="r-glyph">${glyph(s.pillar, { size: 16 })}</span><div><h3>${esc(s.title)}</h3><p>${esc(s.summary)}</p><p class="ep-meta"><span class="r-tag">${esc(PNAME[s.pillar] || s.pillar)}</span> ${esc(s.evidence)}${s.badge ? ` · <b>${esc(s.badge)}</b>` : ''} · ${(s.sources || []).map(x => (x.url ? ext(x.url, esc(x.outlet)) : esc(x.outlet))).join(', ')}</p></div></li>`;
+  const epTop = (e, n = 5) => {
+    const full = EPD[e.date];
+    const list = full ? full.stories.slice(0, n) : (e.titles || []).map(t => ({ title: t, pillar: 'frontier' }));
+    return `<ol class="ep-top">${list.map(s => `<li data-pillar="${esc(s.pillar)}"><span class="r-glyph">${glyph(s.pillar, { size: 14 })}</span><span>${esc(s.title)}</span></li>`).join('')}</ol>`;
+  };
+  const epCard = e => `<li><a class="ep-card" href="daily/${esc(e.date)}">${e.thumb ? `<img src="${esc(e.thumb)}" alt="" width="480" height="270" loading="lazy" decoding="async">` : ''}<div><span class="k">${epNo(e)} · ${esc(epDay(e))}</span><h3>${esc(e.hook || e.day)}</h3><p>${esc(e.tldr || '')}</p></div></a></li>`;
+  const dailyHome = () => {
+    const e = EPS[0];
+    if (!e) return '';
+    return section('daily', `The Transhuman Daily · ${epNo(e)} · ${esc(epDay(e))}`, 'Today, in three minutes', esc(e.tldr || ''),
+      `<div class="daily-grid"><div>${epVideo(e)}</div><div><p class="ep-hook">${esc(e.hook)}</p>${epTop(e)}<p class="cta-row"><a class="btn btn-light" href="daily/${esc(e.date)}">Every story and its sources ${icon.arrow({ size: 16 })}</a><a class="btn btn-ghost" href="daily/">All episodes</a></p></div></div>`, 'daily-home');
+  };
+
   // ------------------------------------------------------------------ shared chrome
   const promo = () => !next ? '' : `<aside class="promo" aria-label="Next meetup"><a href="${esc(rsvpUrl(next))}" target="_blank" rel="noopener"><span class="live-dot" aria-hidden="true"></span><span class="k">Next meetup</span><strong>${esc(fmt(next.start, 'short'))}</strong><span class="promo-what">${esc(evTitle(next))} · ${esc(where(next))} · ${esc(next.price || 'Free')}</span><span class="go">RSVP ${icon.arrow({ size: 16 })}</span></a></aside>`;
 
-  const nav = [['events', 'Events'], ['./#supers', 'The three supers'], ['radar', 'Radar'], ['speakers', 'Speakers'], ['investment', 'Venture studio']];
+  const nav = [['events', 'Events'], ...(EPS.length ? [['daily/', 'Daily']] : []), ['./#supers', 'The three supers'], ['radar', 'Radar'], ['speakers', 'Speakers'], ['investment', 'Venture studio']];
   const header = path => `<header class="site-head"><div class="wrap head-in">
 <a class="brand" href="./" aria-label="${esc(site.name)}: home">${logoMark(34)}<span class="word"><b>Transhumanism</b><i>Australia</i></span></a>
 <nav class="nav" id="nav" aria-label="Main">${nav.map(([h, l]) => `<a href="${h}"${h === path ? ' aria-current="page"' : ''}>${l}</a>`).join('')}<a class="nav-join" href="join">Membership</a></nav>
@@ -119,13 +147,14 @@ ${f.thumb ? `<img src="${esc(f.thumb)}" alt="" width="320" height="180" loading=
     offers: { '@type': 'Offer', price: ev.free ? '0' : String(ev.price || '').replace(/[^\d.]/g, ''), priceCurrency: 'AUD', availability: 'https://schema.org/InStock', url: ev.url },
   });
 
-  const page = ({ path = '', title, description = site.description, body, ld = [], cls = '' }) => {
+  const page = ({ path = '', title, description = site.description, body, ld = [], cls = '', image, nested = false }) => {
     const canonical = path ? `${SITE}/${path}` : `${SITE}/`;
+    const ogImage = image || `${SITE}/assets/img/og.png`;
     return `<!doctype html>
 <html lang="en-AU" class="no-js">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+${nested ? '<base href="../">\n' : ''}<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>${esc(title)}</title>
 <meta name="description" content="${esc(description)}">
 <link rel="canonical" href="${canonical}">
@@ -136,10 +165,8 @@ ${f.thumb ? `<img src="${esc(f.thumb)}" alt="" width="320" height="180" loading=
 <meta property="og:title" content="${esc(title)}">
 <meta property="og:description" content="${esc(description)}">
 <meta property="og:url" content="${canonical}">
-<meta property="og:image" content="${SITE}/assets/img/og.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="${esc(site.name)}: ${esc(site.tagline)}">
+<meta property="og:image" content="${esc(ogImage)}">
+${image ? '' : '<meta property="og:image:width" content="1200">\n<meta property="og:image:height" content="630">\n'}<meta property="og:image:alt" content="${esc(site.name)}: ${esc(site.tagline)}">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="assets/img/favicon-32.png" sizes="32x32" type="image/png">
@@ -147,11 +174,12 @@ ${f.thumb ? `<img src="${esc(f.thumb)}" alt="" width="320" height="180" loading=
 <link rel="preload" href="assets/fonts/Anton-400.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/Inter-500.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/css/site.css?v=${VER}">
+<link rel="alternate" type="application/rss+xml" title="The Transhuman Daily" href="${SITE}/daily/feed.xml">
 <script>document.documentElement.className='js'</script>
 ${[orgLd, ...ld].map(j => `<script type="application/ld+json">${JSON.stringify(j).replace(/</g, '\\u003c')}</script>`).join('\n')}
 </head>
 <body class="${cls}">
-<a class="skip" href="#main">Skip to content</a>
+<a class="skip" href="${nested ? esc(path) : ''}#main">Skip to content</a>
 ${promo()}
 ${header(path)}
 <main id="main">
@@ -276,6 +304,7 @@ ${(() => { const all = new Set(interleave(12)); return rItems.map(it => radarIte
 
   const home = `${hero}
 ${statsBand()}
+${dailyHome()}
 ${section('supers', 'What we\'re about', 'Three doors to a better future', 'Transhumanism is the idea that science and technology can, and should, take us beyond the limits of our biology. We organise everything around three goals.', doors(true))}
 ${homeEvents}
 <section class="sec join" id="join"><div class="wrap">${joinBlock('home')}</div></section>
@@ -392,6 +421,50 @@ ${section('about', '', 'Decoding the mind', '', `<div class="prose"><p>Approxima
 <section class="sec tight"><div class="wrap"><ul class="gallery">${bciPhotos.map((src, i) => `<li>${peopleImg(src, `The BCI demo at SXSW Sydney, photo ${i + 1}`, 1000, 667)}</li>`).join('')}</ul></div></section>
 ${finalCta()}` });
 
+  // ================================================================== THE TRANSHUMAN DAILY: /daily/ and /daily/<date>
+  if (EPS.length) {
+    const latest = EPS[0];
+    files['daily/index.html'] = page({
+      path: 'daily/', nested: true, title: `The Transhuman Daily · ${site.name}`,
+      description: 'The last 24 hours in transhumanism in three minutes, every morning: super longevity, super wellbeing, super intelligence and the frontier tech that gets us there, with every story\'s evidence and sources.',
+      image: latest.cover ? `${SITE}/daily/media/${latest.date}/cover.jpg` : undefined,
+      body: `<section class="page-hero"><div class="wrap"><p class="kicker">The Transhuman Daily</p><h1>The last 24 hours in <em>transhumanism.</em></h1><p class="hero-lede">Three minutes every morning: super longevity, super wellbeing, super intelligence and the frontier tech that gets us there, with every story's evidence and sources. Made by Transhumanism Australia.</p></div></section>
+<section class="sec daily-home"><div class="wrap"><header class="sec-head"><p class="kicker">Latest · ${epNo(latest)} · ${esc(epDay(latest, 'longy'))}</p><h2>${esc(latest.hook || 'Today')}</h2><p class="lede">${esc(latest.tldr || '')}</p></header>
+<div class="daily-grid"><div>${epVideo(latest)}</div><div>${epTop(latest, 6)}<p class="cta-row"><a class="btn btn-light" href="daily/${esc(latest.date)}">Every story and its sources ${icon.arrow({ size: 16 })}</a></p></div></div></div></section>
+${section('episodes', 'Every episode', 'The archive', `New episodes every morning. Follow along on <a href="${esc((site.social.find(s => s.name === 'LinkedIn') || {}).url || '#')}" target="_blank" rel="noopener">LinkedIn</a> or <a href="${esc((site.social.find(s => s.name === 'Facebook') || {}).url || '#')}" target="_blank" rel="noopener">Facebook</a>, or subscribe to the <a href="daily/feed.xml">RSS feed</a>.`, `<ul class="ep-grid">${EPS.map(epCard).join('')}</ul>`)}
+<section class="sec join"><div class="wrap">${joinBlock('daily')}</div></section>`,
+    });
+    EPS.forEach((e, i) => {
+      const full = EPD[e.date];
+      if (!full) return;
+      const prev = EPS[i + 1], nextEp = EPS[i - 1];
+      const byChapter = [];
+      for (const s of full.stories) {
+        const ch = s.chapter || 'Stories';
+        let g = byChapter.find(x => x.ch === ch);
+        if (!g) byChapter.push(g = { ch, items: [] });
+        g.items.push(s);
+      }
+      const posted = Object.entries(full.links || {}).filter(([, u]) => /^https:\/\//.test(u));
+      const ld = [{ '@context': 'https://schema.org', '@type': 'VideoObject', name: `The Transhuman Daily ${epNo(e)}: ${e.hook || e.day}`,
+        description: full.tldr || full.post?.text || site.description, uploadDate: `${e.date}T07:00:00+11:00`, duration: 'PT3M',
+        thumbnailUrl: e.cover ? [`${SITE}/daily/media/${e.date}/cover.jpg`] : [`${SITE}/assets/img/og.png`],
+        contentUrl: e.video ? (e.video.pages ? `${SITE}/${e.video.file}` : e.video.release) : undefined,
+        publisher: { '@type': 'Organization', name: site.name, url: `${SITE}/`, logo: { '@type': 'ImageObject', url: `${SITE}/assets/img/logo-512.png` } } }];
+      files[`daily/${e.date}.html`] = page({
+        path: `daily/${e.date}`, nested: true, title: `${e.hook || 'The Transhuman Daily'} · The Transhuman Daily ${epNo(e)}`,
+        description: full.tldr || site.description, image: e.cover ? `${SITE}/daily/media/${e.date}/cover.jpg` : undefined, ld,
+        body: `<section class="page-hero"><div class="wrap"><p class="kicker">The Transhuman Daily · ${epNo(e)} · ${esc(epDay(e, 'longy'))}</p><h1>${esc(e.hook || 'Today')}</h1><p class="hero-lede">${esc(full.tldr || '')}</p></div></section>
+<section class="sec tight"><div class="wrap ep-wrap">${epVideo(e)}
+<p class="ep-actions">${posted.map(([k, u]) => ext(u, `Watch on ${k === 'x' ? 'X' : k === 'linkedin' ? 'LinkedIn' : k === 'facebook' ? 'Facebook' : esc(k)}`, 'btn btn-ghost btn-sm')).join('')}${e.video ? ext(e.video.release, `Download (${esc(e.video.mb)} MB)`, 'btn btn-ghost btn-sm') : ''}</p></div></section>
+${byChapter.map(g => section('', 'The Transhuman Daily', esc(g.ch), '', `<ol class="ep-stories">${g.items.map(epStory).join('')}</ol>`, 'ep-chapter')).join('\n')}
+${full.transcript && full.transcript.length ? section('transcript', '', 'Transcript', '', `<details class="ep-transcript"><summary>Read the narration</summary><div>${full.transcript.map(t => `<p>${esc(t.t)}</p>`).join('')}</div></details>`) : ''}
+${section('notes', '', 'Good to know', `${esc(full.window || '')} ${(full.notes || []).map(esc).join(' ')} Every headline links to its source. The narrator is an AI voice; the visuals and music are generated for each episode. Nothing here is medical or financial advice.`, `<p class="ep-nav">${prev ? `<a class="more" href="daily/${esc(prev.date)}">${icon.arrow({ size: 16, cls: 'flip' })} ${epNo(prev)} · ${esc(prev.hook || prev.day)}</a>` : ''}${nextEp ? `<a class="more" href="daily/${esc(nextEp.date)}">${epNo(nextEp)} · ${esc(nextEp.hook || nextEp.day)} ${icon.arrow({ size: 16 })}</a>` : ''}<a class="more" href="daily/">All episodes</a></p>`)}
+<section class="sec join"><div class="wrap">${joinBlock('daily-episode')}</div></section>`,
+      });
+    });
+  }
+
   // ================================================================== redirects, 404, next
   const inlineJson = v => JSON.stringify(v).replace(/</g, '\\u003c');
   const redirect = (to, title) => `<!doctype html><html lang="en-AU"><head><meta charset="utf-8"><title>${esc(title)}</title><meta name="robots" content="noindex"><link rel="canonical" href="${SITE}/${esc(to.replace(/^\.\//, ''))}"><meta http-equiv="refresh" content="0; url=${esc(to)}"><script>location.replace(${inlineJson(to)}+(location.hash&&!${inlineJson(to)}.includes('#')?location.hash:''))</script></head><body><p><a href="${esc(to)}">${esc(title)}</a></p></body></html>\n`;
@@ -414,7 +487,8 @@ ${finalCta()}` });
       `LOCATION:${icsText([ev.venue, ev.address].filter(Boolean).join(', '))}`, `URL:${ev.url}`, 'END:VEVENT', 'END:VCALENDAR'];
     files[`cal/${ev.id}.ics`] = lines.map(foldIcs).join('\r\n') + '\r\n';
   }
-  const pages = ['', 'events', 'join', 'radar', 'speakers', 'peterxing', 'alysesue', 'media', 'partners', 'investment', 'bci', 'blog'];
+  const pages = ['', 'events', 'join', 'radar', 'speakers', 'peterxing', 'alysesue', 'media', 'partners', 'investment', 'bci', 'blog',
+    ...(EPS.length ? ['daily/', ...EPS.filter(e => EPD[e.date]).map(e => `daily/${e.date}`)] : [])];
   const day = now.toISOString().slice(0, 10);
   files['sitemap.xml'] = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${pages.map(p => `<url><loc>${SITE}/${p}</loc><lastmod>${day}</lastmod></url>`).join('\n')}\n</urlset>\n`;
   files['robots.txt'] = `User-agent: *\nAllow: /\n\nSitemap: ${SITE}/sitemap.xml\n`;
