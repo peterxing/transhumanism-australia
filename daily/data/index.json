@@ -1,11 +1,40 @@
 {
  "show": "The Transhuman Daily",
- "updated": "2026-11-03T21:59:05+00:00",
- "latest": "2026-11-04",
+ "updated": "2026-11-04T20:10:15+00:00",
+ "latest": "2026-11-05",
  "site": "https://transhuman.com.au/",
  "section": "https://transhuman.com.au/daily",
  "videosOnPages": 3,
  "episodes": [
+  {
+   "date": "2026-11-05",
+   "ep": 4,
+   "hook": "EARLY SIGNS.",
+   "day": "Thursday 5 November 2026",
+   "tldr": "Early signs: 80,000 blood samples will be searched for the first clues of brain disease, an AI screens questionnaires for Parkinson's, and an hour of nature a week brings half the possible boost.",
+   "stories": 18,
+   "pillars": {
+    "longevity": 7,
+    "wellbeing": 4,
+    "intelligence": 4,
+    "frontier": 3
+   },
+   "titles": [
+    "UK Biobank will search 80,000 stored blood samples for the first protein clues of brain disease",
+    "An AI reads long health questionnaires to flag possible Parkinson's sooner",
+    "Thirty people with ALS will test a wearable brain interface for communicating at home"
+   ],
+   "cover": "daily/media/2026-11-05/cover.webp",
+   "thumb": "daily/media/2026-11-05/thumb.webp",
+   "video": {
+    "pages": true,
+    "file": "daily/media/2026-11-05/video.mp4",
+    "release": "https://github.com/peterxing/transhumanism-australia/releases/download/td-ep-2026-11-05/The-Transhuman-Daily_2026-11-05.mp4",
+    "mb": 54.5,
+    "bytes": 54542111,
+    "seconds": 180.01
+   }
+  },
   {
    "date": "2026-11-04",
    "ep": 3,
@@ -85,7 +114,7 @@
    "cover": "daily/media/2026-11-02/cover.webp",
    "thumb": "daily/media/2026-11-02/thumb.webp",
    "video": {
-    "pages": true,
+    "pages": false,
     "file": "daily/media/2026-11-02/video.mp4",
     "release": "https://github.com/peterxing/transhumanism-australia/releases/download/td-ep-2026-11-02/The-Transhuman-Daily_2026-11-02.mp4",
     "mb": 56.3,
