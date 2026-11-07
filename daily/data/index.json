@@ -1,11 +1,40 @@
 {
  "show": "The Transhuman Daily",
- "updated": "2026-11-06T20:14:26+00:00",
- "latest": "2026-11-07",
+ "updated": "2026-11-07T20:32:46+00:00",
+ "latest": "2026-11-08",
  "site": "https://transhuman.com.au/",
  "section": "https://transhuman.com.au/daily",
  "videosOnPages": 3,
  "episodes": [
+  {
+   "date": "2026-11-08",
+   "ep": 7,
+   "hook": "SLEEP ON IT.",
+   "day": "Sunday 8 November 2026",
+   "tldr": "Sleep on it: silencing some sleep cells made mice forget, a gene therapy plus a pill cut seizures in 3 patients, and exam stress showed up in Australian campus sewage.",
+   "stories": 17,
+   "pillars": {
+    "longevity": 4,
+    "wellbeing": 5,
+    "intelligence": 5,
+    "frontier": 3
+   },
+   "titles": [
+    "Mice with some sleep cells silenced slept normally but forgot what they'd learned",
+    "Falling asleep earlier, not sleeping longer, went with more weight loss",
+    "Anthropic says its Claude agents 'dream' to fix their own memory notes"
+   ],
+   "cover": "daily/media/2026-11-08/cover.webp",
+   "thumb": "daily/media/2026-11-08/thumb.webp",
+   "video": {
+    "pages": true,
+    "file": "daily/media/2026-11-08/video.mp4",
+    "release": "https://github.com/peterxing/transhumanism-australia/releases/download/td-ep-2026-11-08/The-Transhuman-Daily_2026-11-08.mp4",
+    "mb": 61.2,
+    "bytes": 61183070,
+    "seconds": 180.01
+   }
+  },
   {
    "date": "2026-11-07",
    "ep": 6,
@@ -85,7 +114,7 @@
    "cover": "daily/media/2026-11-05/cover.webp",
    "thumb": "daily/media/2026-11-05/thumb.webp",
    "video": {
-    "pages": true,
+    "pages": false,
     "file": "daily/media/2026-11-05/video.mp4",
     "release": "https://github.com/peterxing/transhumanism-australia/releases/download/td-ep-2026-11-05/The-Transhuman-Daily_2026-11-05.mp4",
     "mb": 54.5,
