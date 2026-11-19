@@ -1,8 +1,8 @@
 {
  "_about": "Refreshed from Eventbrite by tools/build.mjs --refresh (twice a day in GitHub Actions): `upcoming` mirrors the organiser's live, non-cancelled events; when an event ends it moves to `past` (newest first) and stays there. `overrides` (keyed by Eventbrite event id) lets you add a talk title or speaker, or hide an event, without touching Eventbrite.",
- "updated": "2026-11-18T16:27:58.609Z",
+ "updated": "2026-11-19T16:35:20.148Z",
  "organizer": {
-  "followers": "209",
+  "followers": "210",
   "hostingYears": "8 years",
   "totalEvents": 97,
   "attendeesHosted": "1.4k"
