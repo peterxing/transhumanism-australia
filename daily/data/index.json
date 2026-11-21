@@ -1,11 +1,40 @@
 {
  "show": "The Transhuman Daily",
- "updated": "2026-11-20T20:17:30+00:00",
- "latest": "2026-11-21",
+ "updated": "2026-11-21T23:08:58+00:00",
+ "latest": "2026-11-22",
  "site": "https://transhuman.com.au/",
  "section": "https://transhuman.com.au/daily",
  "videosOnPages": 3,
  "episodes": [
+  {
+   "date": "2026-11-22",
+   "ep": 21,
+   "hook": "IT CHECKS OUT.",
+   "day": "Sunday 22 November 2026",
+   "tldr": "It checks out: proof checkers confirm the AI-assisted Riemann proof, a Neuralink user plays GTA 6 by thought, and Monash finds rogue ageing immune cells in mice.",
+   "stories": 17,
+   "pillars": {
+    "longevity": 5,
+    "wellbeing": 3,
+    "intelligence": 6,
+    "frontier": 3
+   },
+   "titles": [
+    "Proof checkers confirm the Riemann proof an Anthropic mathematician wrote with Claude",
+    "In a Neuralink video, a paralysed trial participant plays GTA 6 with his brain implant",
+    "'Brain-like' vision AI works quite differently inside, a York University test finds"
+   ],
+   "cover": "daily/media/2026-11-22/cover.webp",
+   "thumb": "daily/media/2026-11-22/thumb.webp",
+   "video": {
+    "pages": true,
+    "file": "daily/media/2026-11-22/video.mp4",
+    "release": "https://github.com/peterxing/transhumanism-australia/releases/download/td-ep-2026-11-22/The-Transhuman-Daily_2026-11-22.mp4",
+    "mb": 54.1,
+    "bytes": 54124117,
+    "seconds": 180.01
+   }
+  },
   {
    "date": "2026-11-21",
    "ep": 20,
@@ -85,7 +114,7 @@
    "cover": "daily/media/2026-11-19/cover.webp",
    "thumb": "daily/media/2026-11-19/thumb.webp",
    "video": {
-    "pages": true,
+    "pages": false,
     "file": "daily/media/2026-11-19/video.mp4",
     "release": "https://github.com/peterxing/transhumanism-australia/releases/download/td-ep-2026-11-19/The-Transhuman-Daily_2026-11-19.mp4",
     "mb": 54.8,
