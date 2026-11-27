@@ -1,13 +1,14 @@
 {
  "_about": "Refreshed from Eventbrite by tools/build.mjs --refresh (twice a day in GitHub Actions): `upcoming` mirrors the organiser's live, non-cancelled events; when an event ends it moves to `past` (newest first) and stays there. `overrides` (keyed by Eventbrite event id) lets you add a talk title or speaker, or hide an event, without touching Eventbrite.",
- "updated": "2026-11-19T16:35:20.148Z",
+ "updated": "2026-11-27T17:28:37.327Z",
  "organizer": {
-  "followers": "210",
+  "followers": "211",
   "hostingYears": "8 years",
   "totalEvents": 97,
   "attendeesHosted": "1.4k"
  },
- "upcoming": [
+ "upcoming": [],
+ "past": [
   {
    "id": "2004177230046",
    "url": "https://www.eventbrite.com.au/e/ai-singularity-syndicate-monthly-meetup-tickets-2004177230046",
@@ -25,9 +26,7 @@
    "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1186331740%2F69543884227%2F1%2Foriginal.20260607-073907?crop=focalpoint&fit=crop&w=940&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=9e7a67682b96d1bebfda5d50f1f32117",
    "free": true,
    "price": "Free"
-  }
- ],
- "past": [
+  },
   {
    "id": "2002668240618",
    "name": "AI Singularity Syndicate Monthly Meetup",
